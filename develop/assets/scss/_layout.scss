@@ -1,0 +1,386 @@
+@charset "UTF-8"
+
+$blue01: #144960;
+$gray01: #D9DEE0;
+
+//=============================================================================
+//  Reset for normalize
+//=============================================================================
+html,body,ol,ul,div {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style-type: none;
+}
+
+
+
+//=============================================================================
+//  Basic Layout
+//=============================================================================
+
+html {
+  // height: 100%;
+}
+
+body {
+  // height: 100%;
+  // font-family: 'YuGothic', 'Yu Gothic', '游ゴシック', '游ゴシック体', sans-serif;
+  line-height:1.4;
+  font-size: rem(14);
+  word-break: normal;
+}
+
+.ly-wrapper {  margin: 0;
+
+}
+
+.ly-contents {
+  @include clearfix;
+  margin: 0;
+  padding: 40px 0;
+  min-height: 366px;
+  background-color: $gray01;
+  border-bottom: 1px dotted #fff;
+}
+
+.ly-full-contents {
+  @include clearfix;
+
+}
+
+.ly-footer {
+  padding: 16px;
+  background-color: $blue01;
+  text-align: center;
+  color: #fff;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a,
+a:link {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+//=============================================================================
+//  modules
+//=============================================================================
+
+h1,
+h2 {
+  font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+  font-size: rem(70);
+  margin: 8px;
+  line-height: 1;
+  font-weight: bold;
+}
+
+h2 {
+  margin: 0;
+  color: $blue01;
+  font-size: rem(48);
+  text-align: center;
+}
+
+table {
+  width: 360px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: rem(10);
+  line-height: 1.2;
+}
+
+table th {
+  box-sizing: border-box;
+  width: 100px;
+  padding: 10px;
+  font-weight: bold;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  background-color: $blue01;
+  color: #fff;
+
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4),
+  &:nth-child(5) {
+    width: 5em;
+    text-align: center;
+  }
+}
+table td {
+  padding: 10px;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  text-align: center;
+  background-color: rgba(255,255,255,0.7);
+
+  &:last-child {
+    text-align: left;
+  }
+}
+
+a:link,
+a:visited {
+  color: $blue01;
+  text-decoration: underline;
+}
+
+.list-01 {
+
+  a {
+    position: relative;
+    display: block;
+    padding: 8px 8px 8px 0;
+    font-size: rem(12);
+
+    &:before {
+      // position: absolute;
+      content: "\0020";
+      display: inline-block;
+      left: 0;
+      top: 12px;
+      margin-right: 4px;
+      @include triangle(8px, $blue01, right);
+    }
+  }
+}
+
+//=============================================================================
+//  LAYOUT
+//=============================================================================
+.ly-column {
+  @include clearfix;
+}
+
+#part01 {
+  text-align: center;
+  color: #fff;
+  background: url('../img/bg_001.jpg') no-repeat 100%;
+  background-size: cover;
+  background-position: 3% 50%;
+  background-repeat: no-repeat;
+  min-height: 480px;
+  // font-family: 'Amatic SC', cursive;
+
+  p {
+    font-size: rem(14);
+  }
+
+  .inner {
+    padding: 50px 0 0 ;
+  }
+
+  a {
+    position: relative;
+    margin: 4px 0;
+    display: inline-block;
+    padding: 8px 24px;
+    // background-color: rgba(255,255,255,0.7);
+    // border: 2px solid #fff;
+    color: $blue01;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Amatic SC', cursive;
+    font-size: rem(34);
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+
+    i {
+      font-size: rem(20);
+      margin-right: 10px;
+
+    }
+
+    &:after {
+      position: absolute;
+      content: "\0020";
+      display: block;
+      right: 8px;
+      top: 12px;
+      // @include triangle(8px, $blue01, down);
+    }
+  }
+}
+
+#part04 {
+  padding-bottom: 100px;
+  border-bottom: none;
+
+}
+
+
+.js-door01-contents {
+  display: none;
+}
+
+
+//=============================================================================
+//  COMMON CLASS
+//=============================================================================
+
+/*fontsize
+------------------------------------------ */
+.c_FS10 {font-size: rem(10);}
+.c_FS11 {font-size: rem(11);}
+.c_FS12 {font-size: rem(12);}
+.c_FS13 {font-size: rem(13);}
+.c_FS14 {font-size: rem(14);}
+.c_FS15 {font-size: rem(15);}
+.c_FS16 {font-size: rem(16);}
+.c_FS17 {font-size: rem(17);}
+.c_FS18 {font-size: rem(18);}
+.c_FS19 {font-size: rem(19);}
+.c_F210 {font-size: rem(20);}
+
+/* alignC
+------------------------------------------ */
+.alignC {
+  text-align: center;
+}
+
+
+/* margin
+------------------------------------------ */
+
+/* mAll */
+.mAll0 {margin: 0    !important;}
+.mAll4 {margin: 4px  !important;}
+.mAll8 {margin: 8px  !important;}
+.mAll10 {margin: 10px  !important;}
+.mAll16 {margin: 16px !important;}
+.mAll20 {margin: 20px !important;}
+/* End mAll */
+
+/* mt */
+.mt0 {margin-top: 0    !important;}
+.mt4 {margin-top: 4px  !important;}
+.mt8 {margin-top: 8px  !important;}
+.mt10 {margin-top: 10px  !important;}
+.mt16 {margin-top: 16px !important;}
+.mt20 {margin-top: 20px !important;}
+/* End mt */
+
+/* mr */
+.mr0 {margin-right: 0    !important;}
+.mr4 {margin-right: 4px  !important;}
+.mr8 {margin-right: 8px  !important;}
+.mr10 {margin-right: 10px  !important;}
+.mr16 {margin-right: 16px !important;}
+.mr20 {margin-right: 20px !important;}
+/* End mr */
+
+/* mb */
+.mb0 {margin-bottom: 0    !important;}
+.mb4 {margin-bottom: 4px  !important;}
+.mb8 {margin-bottom: 8px  !important;}
+.mb10 {margin-bottom: 10px  !important;}
+.mb16 {margin-bottom: 16px !important;}
+.mb20 {margin-bottom: 20px !important;}
+.mb40 {margin-bottom: 40px !important;}
+/* End mb */
+
+/* ml */
+.ml0 {margin-left: 0    !important;}
+.ml4 {margin-left: 4px  !important;}
+.ml8 {margin-left: 8px  !important;}
+.ml10 {margin-left: 10px  !important;}
+.ml16 {margin-left: 16px !important;}
+.ml20 {margin-left: 20px !important;}
+/* End ml */
+
+/* mtb */
+.mtb4 {margin: 4px 0  !important;}
+.mtb8 {margin: 8px 0  !important;}
+.mtb10 {margin: 10px 0 !important;}
+.mtb16 {margin: 16px 0 !important;}
+.mtb20 {margin: 20px 0 !important;}
+.mtb80 {margin: 80px 0 !important;}
+/* End mtb */
+
+/* mrl */
+.mrl4 {margin: 0 4px  !important;}
+.mrl8 {margin: 0 8px  !important;}
+.mrl10 {margin: 0 10px  !important;}
+.mrl16 {margin: 0 16px !important;}
+.mrl20 {margin: 0 20px !important;}
+/* End mrl */
+
+/* End mAll */
+
+
+/* padding
+------------------------------------------ */
+//各モジュールに必要なpaddingは指定されているので、この汎用classは極力使わないようにする。
+//入れ子構造になった際、どうしても見た目が不格好になってしまう場合にのみ使用可能。
+
+/* pAll */
+
+.pAll0 {padding: 0    !important;}
+.pAll4 {padding: 4px  !important;}
+.pAll5 {padding: 5px  !important;}
+.pAll8 {padding: 8px  !important;}
+.pAll16 {padding: 16px !important;}
+.pAll20 {padding: 20px !important;}
+/* End pAll */
+/* pt */
+.pt0 {padding-top: 0    !important;}
+.pt4 {padding-top: 4px  !important;}
+.pt5 {padding-top: 5px  !important;}
+.pt8 {padding-top: 8px  !important;}
+.pt16 {padding-top: 16px !important;}
+.pt20 {padding-top: 20px !important;}
+/* End pt */
+/* pr */
+.pr0 {padding-right: 0    !important;}
+.pr4 {padding-right: 4px  !important;}
+.pr5 {padding-right: 5px  !important;}
+.pr8 {padding-right: 8px  !important;}
+.pr16 {padding-right: 16px !important;}
+.pr20 {padding-right: 20px !important;}
+/* End pr */
+/* pb */
+.pb0 {padding-bottom: 0    !important;}
+.pb4 {padding-bottom: 4px  !important;}
+.pb5 {padding-bottom: 5px  !important;}
+.pb8 {padding-bottom: 8px  !important;}
+.pb16 {padding-bottom: 16px !important;}
+.pb20 {padding-bottom: 20px !important;}
+/* End pb */
+/* pl */
+.pl0 {padding-left: 0    !important;}
+.pl4 {padding-left: 4px  !important;}
+.pl5 {padding-left: 5px  !important;}
+.pl8 {padding-left: 8px  !important;}
+.pl16 {padding-left: 16px !important;}
+.pl20 {padding-left: 20px !important;}
+/* End pl */
+/* ptb */
+.ptb4 {padding: 4px 0  !important;}
+.ptb5 {padding: 5px 0  !important;}
+.ptb8 {padding: 8px 0  !important;}
+.ptb16 {padding: 16px 0 !important;}
+.ptb20 {padding: 20px 0 !important;}
+/* End ptb */
+/* prl */
+.prl4 {padding: 0 4px  !important;}
+.prl5 {padding: 0 5px  !important;}
+.prl8 {padding: 0 8px  !important;}
+.prl16 {padding: 0 16px !important;}
+.prl20 {padding: 0 20px !important;}
+/* End prl */
